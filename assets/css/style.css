@@ -251,3 +251,8 @@ a.active p {
 .mb-50 {
     margin-bottom: 120px;
 }
+
+.align-end {
+    align-items: end;
+    justify-content: center;
+}
