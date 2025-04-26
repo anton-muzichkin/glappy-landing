@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Glappy - Mental Health AI Application</title>
+</head>
+<body>
+    
+    <header class="header" id="header">
+        <div class="header-container">
+          <a href="#" class="logo">Gloppy</a>
+          
+          <nav class="nav">
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="#contact" class="nav-link">Contact Us</a>
+          </nav>
+          
+          <button class="mobile-menu-btn">☰</button>
+        </div>
+
+      </header>
+
+      <div class="container">
+        <div class="text">
+          <h1>Mental Health App<br>To Reduce Stress And Anxiety</h1>
+          <div class="demo_buttons">
+            <input type="button" value="Access Demo" class="pointers"></input>
+            <input type="button" value="Get a presentation " class="pointers"></input>
+          </div>
+        </div>
+        <div class="phones">
+          <img src="sources/phones.png" alt="Mental Health App Screenshot"  style="transform: scale(2.0);">
+        </div>
+      </div>
+
+      <script>
+    // Add shadow to header on scroll
+    const header = document.getElementById('header');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu functionality could be added here
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    mobileMenuBtn.addEventListener('click', () => {
+      alert('Mobile menu clicked - add your menu toggle functionality here');
+    });
+  </script>
+
+</body>
+</html>
