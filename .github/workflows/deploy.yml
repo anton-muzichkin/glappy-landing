@@ -1,28 +1,44 @@
-name: Deploy GitHub Pages
+name: Deploy glappy-landing to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  pages: write
+  id-token: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: read
-
     steps:
-      - name: Checkout code
+      - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+      - name: Prepare site artifact
+        run: |
+          # make a clean output folder
+          mkdir _site
+          # copy everything from your glappy-landing folder into it
+          cp -R glappy-landing/* _site/
+          # if you have a .git folder inside, remove it
+          rm -rf _site/.github
 
-      - name: Upload artifact
+      - name: Upload site artifact
+        id: upload
         uses: actions/upload-pages-artifact@v3
         with:
-          path: assets
+          path: _site
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+
+    steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v3
+        id: deploy
+        uses: actions/deploy-pages@v4
