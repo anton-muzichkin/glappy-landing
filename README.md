@@ -1,2 +1,2 @@
-#Glappy
+# Glappy
 ![Cover Image](image.png)
