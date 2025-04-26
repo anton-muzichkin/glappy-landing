@@ -256,3 +256,37 @@ a.active p {
     align-items: end;
     justify-content: center;
 }
+
+.bold {
+    font-weight: 900;
+}
+
+.lg-font {
+    font-size: 29px;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.bottom-0 {
+    bottom: -68px!important;
+    left: 40px!important;
+}
+
+.p-2 {
+    padding: 10px;
+    border-radius: 15px;
+}
