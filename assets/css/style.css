@@ -5,8 +5,10 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #4200FF 0%, #3F00F1 12%, #000000 100%);
+    background: #000000;
+    background: linear-gradient(to bottom, #4200FF 1%, #000000 20%, #000000 100%);
     height: 100vh;
+    max-height: 100%;
     font-family: "Poppins", sans-serif;
 }
 
@@ -153,4 +155,34 @@ h3 {
 
 .mb-2 {
     margin-bottom: 5px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #242424;
+    padding: 25px 0px;
+}
+
+.ml-0 {
+    margin-left: 0;
+}
+
+footer .row .col .card {
+    text-align: center;
+}
+
+footer .row .col .card a {
+    text-decoration: none;
+}
+
+footer .row .col .card a p {
+    margin-top: 10px;
+    color: #B3B3B3;
+}
+
+a.active p {
+    color: #03DAC6!important;
 }
