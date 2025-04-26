@@ -17,20 +17,30 @@
             <a href="#features" class="nav-link">Features</a>
             <a href="#faq" class="nav-link">FAQ</a>
             <a href="#contact" class="nav-link">Contact Us</a>
+            <div id="printfulBtnMobileSlot"></div>
+            </div>
           </nav>
 
-          <a href="#shop" class="shop-btn">
-            <button class="shop-button"><img src="sources/Vector.png"></button> <!-- You can use an icon or text here -->
-          </a>
-        </div>
-        <!--I need to paste this printful button near the header in one line-->
+         <!-- <a href="#shop" class="shop-btn" id="printfulBtnMobileSlot">
+            <button class="shop-button"><img src="sources/Vector.png"></button>
+          </a>-->
+
+          <div id="originalPrintfulSlot">
+            <div id="printfulBtnWrapper">
+              <a href="#shop" class="shop-btn">
+                <button class="shop-button">
+                  <img src="sources/Vector.png" />
+                </button>
+              </a>
+            </div>
+          </div>
       </header>
       <div class="container spacer">
         <div class="text">
           <h1>Mental Health App<br>To Reduce Stress And Anxiety</h1>
-          <div class="demo_buttons">
-            <input type="button" onclick="window.location.href='https://www.geeksforgeeks.org/'" value="Access Demo" class="pointers" placeholder="Access Demo"></input>
-            <input type="button" value="Get a presentation " class="pointers"></input>
+          <div class="demo_buttons" style="padding-top: 10px;">
+            <input type="button" onclick="window.location.href='https://www.geeksforgeeks.org/'" value="Access Demo" class="pointers btWithBackground" placeholder="Access Demo" title="Access Demo"></input>
+            <input type="button" value="Get a presentation " class="pointers btWithoutBackground"></input>
           </div>
         </div>
         <div class="phones">
@@ -89,7 +99,7 @@
       <script>
 
 const items = document.querySelectorAll('.faq-item');
-  
+
   items.forEach(item => {
     item.addEventListener('click', () => {
       item.classList.toggle('active');
@@ -103,22 +113,38 @@ const items = document.querySelectorAll('.faq-item');
       }
     });
   });
-    // Add shadow to header on scroll
-  //  const header = document.getElementById('header');
-    
-    //  window.addEventListener('scroll', () => {
-      if (window.scrollY > 20) {
-     //   header.classList.add('scrolled');
-      } else {
-      //  header.classList.remove('scrolled');
-      }
- //   });
 
+  const printfulBtn = document.getElementById('printfulBtnWrapper');
+  const mobileSlot = document.getElementById('printfulBtnMobileSlot');
+  const originalSlot = document.getElementById('originalPrintfulSlot');
+
+  function handleResize() {
+    if (window.innerWidth <= 768) {
+      if (!mobileSlot.contains(printfulBtn)) {
+        mobileSlot.appendChild(printfulBtn);
+      }
+    } else {
+      if (!originalSlot.contains(printfulBtn)) {
+        originalSlot.appendChild(printfulBtn);
+      }
+    }
+  }
+
+  window.addEventListener('resize', handleResize);
+  window.addEventListener('DOMContentLoaded', handleResize);
+    
+
+  window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+       header.classList.add('scrolled');
+      } else {
+       header.classList.remove('scrolled');
+      }
+    });
     // Mobile menu functionality could be added here
   //  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     //mobileMenuBtn.addEventListener('click', () => {
       //alert('Mobile menu clicked - add your menu toggle functionality here');
-//    });
   </script>
 
 </body>

@@ -100,6 +100,30 @@
     width: 90%;
   }
   
+  .btWithBackground{
+    background-color: #03DAC6;
+    border-radius: 9999px;
+    padding: 10px 20px;
+    color: white;
+    width: 350px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    color: black;
+  }
+  .btWithoutBackground{
+    background-color: transparent;
+    border-radius: 9999px;
+    padding: 10px 20px;
+    color: white;
+    width: 350px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: white 2px solid;
+  }
+
   .text {
     flex: 1;
   }
@@ -202,4 +226,10 @@
         .mobile-menu-btn {
           display: block;
         }
+      }
+      #printfulBtnWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 16px;
       }
