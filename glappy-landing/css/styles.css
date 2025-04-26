@@ -217,6 +217,24 @@
   height: 95px;
   width: 95px;
 }
+
+
+.merch_items{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  padding-bottom: 100px;
+  margin: 10px;
+}
+.merchitem{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
+  padding: 10px;
+  margin: 15px;
+}
       /* Responsive styles */
       @media (max-width: 768px) {
         .nav {
