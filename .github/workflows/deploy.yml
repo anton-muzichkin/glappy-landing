@@ -20,8 +20,8 @@ jobs:
         run: |
           # make a clean output folder
           mkdir _site
-          # copy everything from your glappy-landing folder into it
-          cp -R glappy-landing/* _site/
+          # copy everything from the repository root folder into it, excluding _site itself
+          rsync -av --exclude '_site' ./ _site/
           # if you have a .git folder inside, remove it
           rm -rf _site/.github
 
