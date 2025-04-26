@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="sources/header.png" type="image/x-icon">
+    <title>Glappy - Mental Health AI Application</title>
+</head>
+<body>
+    <main>
+    <header class="header" id="header">
+        <div class="header-container">
+          <a href="#" class="logo"><img src="sources/Union.svg" style="transform: scale(0.6);"></a>
+          <nav class="nav">
+            <a href="#demo" class="nav-link">Demo</a>
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="#contact" class="nav-link">Contact Us</a>
+          </nav>
+
+          <a href="#shop" class="shop-btn">
+            <button class="shop-button"><img src="sources/Vector.png"></button> <!-- You can use an icon or text here -->
+          </a>
+        </div>
+        <!--I need to paste this printful button near the header in one line-->
+      </header>
+      <div class="container spacer">
+        <div class="text">
+          <h1>Mental Health App<br>To Reduce Stress And Anxiety</h1>
+          <div class="demo_buttons">
+            <input type="button" onclick="window.location.href='https://www.geeksforgeeks.org/'" value="Access Demo" class="pointers" placeholder="Access Demo"></input>
+            <input type="button" value="Get a presentation " class="pointers"></input>
+          </div>
+        </div>
+        <div class="phones">
+          <img src="sources/phones.png" alt="Mental Health App Screenshot"  style="transform: scale(1.5);">
+        </div>
+      </div>
+    </main>
+
+    <img src="sources/10.png" alt="Glappy Logo" class="spacer">
+    <img src="sources/11.png" alt="">
+    <img src="sources/12.png" alt="">
+
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          What's available in free version?
+          <div class="toggle-icon">+</div>
+        </div>
+        <div class="faq-answer">Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Is my data stored securely?
+          <div class="toggle-icon">+</div>
+        </div>
+        <div class="faq-answer">Yes! We use encrypted databases and industry standards.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          Why I can trust to your application and results?
+          <div class="toggle-icon">+</div>
+        </div>
+        <div class="faq-answer">You trust to the data that application provide because our AI model is trained and certificied by professionals.</div>
+      </div>
+    
+      <div class="faq-item">
+        <div class="faq-question">
+          How does billing work?
+          <div class="toggle-icon">+</div>
+        </div>
+        <div class="faq-answer">Billing is monthly or yearly, depending on your subscription.</div>
+      </div>
+    </div>
+
+    <img src="sources/Frame 1321316802.png" alt="" class="">
+
+    <div class="social" style="padding-top: 50px; padding-bottom: 50px;">
+      <img src="sources/linkedin.png" alt="" class="pointers" style="height: 120px;">
+      <img src="sources/phone.png" alt="" class="pointers" style="height: 120px;">
+      <!--<img src="sources/store-512.png" alt="" class="pointers" style="height: 120px;"> -->
+    </div>
+
+      <!---Scripts  -->
+      <script>
+
+const items = document.querySelectorAll('.faq-item');
+  
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('active');
+      const icon = item.querySelector('.toggle-icon');
+      if (item.classList.contains('active')) {
+        icon.textContent = "-"; // show minus
+        icon.style.backgroundColor = "#ff0000"; // red
+      } else {
+        icon.textContent = "+"; // show plus
+        icon.style.backgroundColor = "#00ff00"; // green
+      }
+    });
+  });
+    // Add shadow to header on scroll
+  //  const header = document.getElementById('header');
+    
+    //  window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+     //   header.classList.add('scrolled');
+      } else {
+      //  header.classList.remove('scrolled');
+      }
+ //   });
+
+    // Mobile menu functionality could be added here
+  //  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    //mobileMenuBtn.addEventListener('click', () => {
+      //alert('Mobile menu clicked - add your menu toggle functionality here');
+//    });
+  </script>
+
+</body>
+</html>
